@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #E5EDF2;
+  font-family: 'Nunito', sans-serif;
+}
+
+.phone {
+  position: absolute;
+  width: 300px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #142550;
+  box-shadow:  20px 20px 60px #c3c9ce,
+  -20px -20px 60px #ffffff;
+  border-radius: 30px;
+  .screen {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    .top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      color: #66718D;
+      font-weight: 400;
+      font-size: 0.8em;
+      margin-top: 20px;
+      .border {
+        width: 100px;
+        height: 10px;
+        border-radius: 40px;
+        background: #142550;
+        box-shadow:  5px 5px 10px #0f1c3e,
+        -5px -5px 10px #192e62;
+      }
+      .data {
+        i:nth-child(2) {
+          margin: 0 4px;
+        }
+      }
+    }
+    .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+      text-align: center;
+      .clock-container {
+        width: 210px;
+        height: 210px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        box-shadow:  inset 5px 5px 10px #101e40,
+        inset -5px -5px 10px #182c60;
+        .clock-content {
+          width: 160px;
+          height: 160px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          background: #142550;
+          box-shadow:  3px 3px 8px #0f1c3e,
+                       -3px -3px 8px #192e62;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 1000;
+          }
+          .hour, .min, .sec {
+            position: absolute;
+          }
+          .hour, .hr {
+            width: 120px;
+            height: 120px;
+          }
+          .min, .mn {
+            width: 140px;
+            height: 140px;
+          }
+          .sec, .sc {
+            width: 150px;
+            height: 150px;
+          }
+          .hr, .mn, .sc {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            border-radius: 50%;
+          }
+          //AGUJA HORA
+          .hr::before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 60px;
+            background: #D92D7B;
+            z-index: 10;
+            border-radius: 6px 6px 0 0;
+          }
+          //AGUJA MINUTOS
+          .mn::before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 70px;
+            background: #fff;
+            z-index: 11;
+            border-radius: 6px 6px 0 0;
+          }
+          //AGUJA SEGUNDOS
+          .sc::before {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 100px;
+            background: #fff;
+            z-index: 12;
+            border-radius: 6px 6px 0 0;
+          }
+        }
+      }
+     
+      .clock-country {
+        margin-top: 30px;
+        text-align: center;
+        h4 {
+          font-size: 1.2em;
+          font-weight: 400;
+          color: #D92D7B;
+          margin-bottom: 10px;
+        }
+        h2 {
+          font-size: 1.7em;
+          font-weight: 600;
+          color: #fff;
+        }
+      }
+    }
+    .bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      text-align: center;
+      margin-top: 70px;
+      font-size: 0.7em;
+      font-weight: 600;
+      color: #66718D;
+      .clock, .list, .setting {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        box-shadow:  inset 5px 5px 10px #101e40,
+        inset -5px -5px 10px #182c60;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        i {
+          margin-bottom: 5px;
+          font-size: 1.5em;
+        }
+      }
+      div.active {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #D92D7B;
+        box-shadow:  inset 1px 1px 4px #b82669,
+        inset -1px -1px 4px #222121;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

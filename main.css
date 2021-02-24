@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #E5EDF2;
+  font-family: 'Nunito', sans-serif;
+}
+
+.phone {
+  position: absolute;
+  width: 300px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #142550;
+  -webkit-box-shadow: 20px 20px 60px #c3c9ce, -20px -20px 60px #ffffff;
+          box-shadow: 20px 20px 60px #c3c9ce, -20px -20px 60px #ffffff;
+  border-radius: 30px;
+}
+
+.phone .screen {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 5px;
+}
+
+.phone .screen .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #66718D;
+  font-weight: 400;
+  font-size: 0.8em;
+  margin-top: 20px;
+}
+
+.phone .screen .top .border {
+  width: 100px;
+  height: 10px;
+  border-radius: 40px;
+  background: #142550;
+  -webkit-box-shadow: 5px 5px 10px #0f1c3e, -5px -5px 10px #192e62;
+          box-shadow: 5px 5px 10px #0f1c3e, -5px -5px 10px #192e62;
+}
+
+.phone .screen .top .data i:nth-child(2) {
+  margin: 0 4px;
+}
+
+.phone .screen .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.phone .screen .center .clock-container {
+  width: 210px;
+  height: 210px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 5px 5px 10px #101e40, inset -5px -5px 10px #182c60;
+          box-shadow: inset 5px 5px 10px #101e40, inset -5px -5px 10px #182c60;
+}
+
+.phone .screen .center .clock-container .clock-content {
+  width: 160px;
+  height: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  background: #142550;
+  -webkit-box-shadow: 3px 3px 8px #0f1c3e, -3px -3px 8px #192e62;
+          box-shadow: 3px 3px 8px #0f1c3e, -3px -3px 8px #192e62;
+}
+
+.phone .screen .center .clock-container .clock-content::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.phone .screen .center .clock-container .clock-content .hour, .phone .screen .center .clock-container .clock-content .min, .phone .screen .center .clock-container .clock-content .sec {
+  position: absolute;
+}
+
+.phone .screen .center .clock-container .clock-content .hour, .phone .screen .center .clock-container .clock-content .hr {
+  width: 120px;
+  height: 120px;
+}
+
+.phone .screen .center .clock-container .clock-content .min, .phone .screen .center .clock-container .clock-content .mn {
+  width: 140px;
+  height: 140px;
+}
+
+.phone .screen .center .clock-container .clock-content .sec, .phone .screen .center .clock-container .clock-content .sc {
+  width: 150px;
+  height: 150px;
+}
+
+.phone .screen .center .clock-container .clock-content .hr, .phone .screen .center .clock-container .clock-content .mn, .phone .screen .center .clock-container .clock-content .sc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.phone .screen .center .clock-container .clock-content .hr::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 60px;
+  background: #D92D7B;
+  z-index: 10;
+  border-radius: 6px 6px 0 0;
+}
+
+.phone .screen .center .clock-container .clock-content .mn::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 70px;
+  background: #fff;
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+}
+
+.phone .screen .center .clock-container .clock-content .sc::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background: #fff;
+  z-index: 12;
+  border-radius: 6px 6px 0 0;
+}
+
+.phone .screen .center .clock-country {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.phone .screen .center .clock-country h4 {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #D92D7B;
+  margin-bottom: 10px;
+}
+
+.phone .screen .center .clock-country h2 {
+  font-size: 1.7em;
+  font-weight: 600;
+  color: #fff;
+}
+
+.phone .screen .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  margin-top: 70px;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: #66718D;
+}
+
+.phone .screen .bottom .clock, .phone .screen .bottom .list, .phone .screen .bottom .setting {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 5px 5px 10px #101e40, inset -5px -5px 10px #182c60;
+          box-shadow: inset 5px 5px 10px #101e40, inset -5px -5px 10px #182c60;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.phone .screen .bottom .clock i, .phone .screen .bottom .list i, .phone .screen .bottom .setting i {
+  margin-bottom: 5px;
+  font-size: 1.5em;
+}
+
+.phone .screen .bottom div.active {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #D92D7B;
+  -webkit-box-shadow: inset 1px 1px 4px #b82669, inset -1px -1px 4px #222121;
+          box-shadow: inset 1px 1px 4px #b82669, inset -1px -1px 4px #222121;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=main.css.map */
